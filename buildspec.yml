@@ -15,4 +15,5 @@ phases:
     commands:
       - echo "Updating lambda Function..."
       - aws lambda update-function-code --function-name Test3 --zip-file fileb://deployment_package.zip
+      - aws lambda create-event-source-mapping --function-name Test3 --batch-size 500 --maximum-batching-window-in-seconds 5 --starting-position LATEST \ --event-source-arn arn:aws:lambda:ap-south-1:817178671443:function:Test3
       - echo "DONE!!"
