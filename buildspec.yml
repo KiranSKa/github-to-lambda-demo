@@ -15,5 +15,5 @@ phases:
     commands:
       - echo "Updating lambda Function..."
       - aws lambda update-function-code --function-name Test3 --zip-file fileb://deployment_package.zip
-      - aws lambda invoke — function-name arn:aws:lambda:ap-south-1:817178671443:function:Test3
+      - aws lambda invoke --function-arn arn:aws:lambda:ap-south-1:817178671443:function:Test3 --invocation-type RequestResponse
       - echo "DONE!!"
