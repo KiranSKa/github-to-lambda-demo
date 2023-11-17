@@ -15,5 +15,5 @@ phases:
     commands:
       - echo "Updating lambda Function..."
       - aws lambda update-function-code --function-name Test3 --zip-file fileb://deployment_package.zip
-      -aws lambda invoke --cli-binary-format raw-in-base64-out --function-name Test3 --cli-binary-format raw-in-base64-out
+      -aws lambda invoke --function-name Test3
       - echo "DONE!!"
